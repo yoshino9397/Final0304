@@ -1,6 +1,5 @@
 {
   "name": "reminder",
-  "homepage": " https://yoshino9397.github.io/Final0304/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +18,7 @@
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "homepage": " https://yoshino9397.github.io/Final0304/build/"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,10 +1,10 @@
 import axios from "axios";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 const table = {
-  Books: 10,
-  Art: 25,
-  Mythology: 20,
+  books: 10,
+  geography: 22,
+  mythology: 20,
 };
 
 const API_ENDPOINT = "https://opentdb.com/api.php?";
@@ -12,6 +12,7 @@ const API_ENDPOINT = "https://opentdb.com/api.php?";
 const url = "";
 const tempUrl =
   "https://opentdb.com/api.php?amount=10&category=10&difficulty=easy&type=multiple";
+
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {

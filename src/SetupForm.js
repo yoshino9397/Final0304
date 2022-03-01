@@ -33,9 +33,9 @@ const SetupForm = () => {
               value={quiz.category}
               onChange={handleChange}
             >
-              <option value="sports">Books</option>
-              <option value="history">Art</option>
-              <option value="politics">Mythology</option>
+              <option value="books">Books</option>
+              <option value="geography">Geography</option>
+              <option value="mythology">Mythology</option>
             </select>
           </div>
           {/* difficulty */}

@@ -10,7 +10,7 @@ const SetupForm = () => {
           <h2>Quiz</h2>
           {/* amount */}
           <div className='form-control'>
-            <label htmlFor='amount'>number of questions</label>
+            <label htmlFor='amount'>Number of questions</label>
             <input
               type='number'
               name='amount'
@@ -25,7 +25,7 @@ const SetupForm = () => {
           {/* category */}
 
           <div className='form-control'>
-            <label htmlFor='category'>category</label>
+            <label htmlFor='category'>Category</label>
             <select
               name='category'
               id='category'
@@ -33,15 +33,17 @@ const SetupForm = () => {
               value={quiz.category}
               onChange={handleChange}
             >
-              <option value='books'>books</option>
-              <option value='geography'>geography</option>
-              <option value='mythology'>mythology</option>
+              <option value='books'>Books</option>
+              <option value='geography'>Geography</option>
+              <option value='mythology'>Mythology</option>
+              <option value='sports'>Sports</option>
+              <option value='computers'>Computers</option>
             </select>
           </div>
           {/* difficulty */}
 
           <div className='form-control'>
-            <label htmlFor='difficulty'>select difficulty</label>
+            <label htmlFor='difficulty'>Select Difficulty</label>
             <select
               name='difficulty'
               id='difficulty'
@@ -49,14 +51,14 @@ const SetupForm = () => {
               value={quiz.difficulty}
               onChange={handleChange}
             >
-              <option value='easy'>easy</option>
-              <option value='medium'>medium</option>
-              <option value='hard'>hard</option>
+              <option value='easy'>Easy</option>
+              <option value='medium'>Medium</option>
+              <option value='hard'>Hard</option>
             </select>
           </div>
           {error && (
             <p className='error'>
-              can't generate questions, please try different options
+              Sorry, We couldn't generate your request! Try it again.
             </p>
           )}
           <button type='submit' onClick={handleSubmit} className='submit-btn'>

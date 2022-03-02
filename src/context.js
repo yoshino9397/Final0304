@@ -5,11 +5,13 @@ const table = {
   books: 10,
   geography: 22,
   mythology: 20,
+  sports : 21,
+  computers : 18
 }
 
 const API_ENDPOINT = 'https://opentdb.com/api.php?'
 
-const url = ''
+
 const tempUrl =
   'https://opentdb.com/api.php?amount=10&category=10&difficulty=easy&type=multiple'
 const AppContext = React.createContext()

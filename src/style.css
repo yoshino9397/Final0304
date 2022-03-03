@@ -57,7 +57,7 @@ Global Styles
 
 body {
   font-family: "Cherry Cream Soda";
-  background: #f5b5da;
+  background: var(--clr-purple);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -182,10 +182,10 @@ main {
   display: block;
   width: 100%;
   margin: 0.75rem auto;
-  background: #b34b6a;
+  background: var(--clr-primary-7);
   border-radius: var(--radius);
   border-color: transparent;
-  color: white;
+  color: var(--clr-black);
   letter-spacing: var(--spacing);
   font-size: 1rem;
   cursor: pointer;
@@ -201,8 +201,8 @@ main {
 }
 
 .answer-btn:hover {
-  background: #d1a0c1;
-  color: black;
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
 }
 
 .correct-answers {
@@ -228,16 +228,16 @@ main {
   font-weight: 700;
   letter-spacing: var(--spacing);
   font-size: 1rem;
-  background: #f5cbe3;
-  color: black;
+  background: var(--clr-primary-9);
+  color: var(--clr-black);
   -webkit-transition: var(--transition);
   transition: var(--transition);
   cursor: pointer;
 }
 
 .next-question:hover {
-  background: #a355a3;
-  color: white;
+  background: #3a8b5a;
+  color: #d0ff00;
 }
 
 /*

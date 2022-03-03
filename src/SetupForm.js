@@ -1,8 +1,8 @@
-import React from 'react'
-import { useGlobalContext } from './context'
+import React from 'react';
+import { useGlobalContext } from './context';
 
 const SetupForm = () => {
-  const { quiz, handleChange, handleSubmit, error } = useGlobalContext()
+  const { quiz, handleChange, handleSubmit, error } = useGlobalContext();
   return (
     <main>
       <section className='quiz quiz-small'>
@@ -19,7 +19,7 @@ const SetupForm = () => {
               onChange={handleChange}
               className='form-input'
               min={1}
-              max={50}
+              max={10}
             />
           </div>
           {/* category */}
@@ -33,8 +33,13 @@ const SetupForm = () => {
               value={quiz.category}
               onChange={handleChange}
             >
+              <option value='books'>Books</option>
+              <option value='geography'>Geography</option>
+              <option value='mythology'>Mythology</option>
+              <option value='sports'>Sports</option>
+              <option value='computers'>Computers</option>
+              <option value='entertainment'>Entertainment</option>
               <option value='animal'>Animal</option>
-              
             </select>
           </div>
           {/* difficulty */}
@@ -64,7 +69,7 @@ const SetupForm = () => {
         </form>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default SetupForm
+export default SetupForm;

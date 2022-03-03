@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useContext, useEffect } from 'react'
+import * as data from "./question.json";
 
 const table = {
   books: 10,
@@ -9,11 +10,7 @@ const table = {
   computers : 18
 }
 
-const API_ENDPOINT = 'https://opentdb.com/api.php?'
 
-
-const tempUrl =
-  'https://opentdb.com/api.php?amount=10&category=10&difficulty=easy&type=multiple'
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
@@ -24,8 +21,8 @@ const AppProvider = ({ children }) => {
   const [correct, setCorrect] = useState(0)
   const [error, setError] = useState(false)
   const [quiz, setQuiz] = useState({
-    amount: 10,
-    category: 'books',
+    amount: 5,
+    category: 'Animal',
     difficulty: 'easy',
   })
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -33,9 +30,9 @@ const AppProvider = ({ children }) => {
   const fetchQuestions = async (url) => {
     setLoading(true)
     setWaiting(false)
-    const response = await axios(url).catch((err) => console.log(err))
-    if (response) {
-      const data = response.data.results
+    
+    if (url) {
+      const data = url.default.results
       if (data.length > 0) {
         setQuestions(data)
         setLoading(false)
@@ -85,8 +82,7 @@ const AppProvider = ({ children }) => {
     e.preventDefault()
     const { amount, category, difficulty } = quiz
 
-    const url = `${API_ENDPOINT}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`
-    fetchQuestions(url)
+    fetchQuestions(data)
   }
 
   return (

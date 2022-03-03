@@ -1,0 +1,66 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+        "category": "Entertainment: Animal",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which of the following is not a type of penguin?",
+        "correct_answer": "Waterland",
+        "incorrect_answers": [
+            "Emperor", 
+            "Chinstrap", 
+            "Macaroni"
+        ]
+      },
+    {
+      "category": "Entertainment: Animal",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Walruses can eat about how many clams in one day?",
+      "correct_answer": "5000",
+      "incorrect_answers": [
+        "100",
+        "130",
+        "3000"
+      ]
+    },
+    {
+      "category": "Entertainment: Animal",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How many koalas stacked on top of one another does it take to reach the height of a male giraffe—the world’s tallest land animal?",
+      "correct_answer": "7",
+      "incorrect_answers": [
+        "2",
+        "4",
+        "50"
+      ]
+    },
+    {
+      "category": "Entertainment: Animal",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of the following animals is not nocturnal?",
+      "correct_answer": "Sheep",
+      "incorrect_answers": [
+          "Skunk",
+          "Leoard",
+          "Tiger"
+        ]
+    },
+    {
+      "category": "Entertainment: Animal",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "An ant says, “Danger ahead!” by doing what?",
+      "correct_answer": "Oozing chemicals",
+      "incorrect_answers": [
+          "Running toward water",
+          "Rolling on its back", 
+          "Squealing"
+        ]
+    }
+    
+  ]
+}

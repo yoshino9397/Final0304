@@ -37,14 +37,19 @@ const AppProvider = ({ children }) => {
     setLoading(true);
     setWaiting(false);
     let response,
-      manga = '';
+      manga = '',
+      animal = '';
     if (url.indexOf('manga') != -1) {
+      animal = '';
       manga = url.split('&');
       response = await axios(manga[0]).catch((err) => console.log(err));
     } else if (url.indexOf('animal') != -1) {
+      manga = '';
+      animal = url.split('&');
       response = true;
     } else {
       manga = '';
+      animal = '';
       response = await axios(url).catch((err) => console.log(err));
     }
     if (response) {
@@ -53,7 +58,7 @@ const AppProvider = ({ children }) => {
         data = response.data.data[0][manga[2]];
         data = data.slice(0, manga[1]);
       } else if (url.indexOf('animal') != -1) {
-        data = dataQ.default.results;
+        data = dataQ.default.results.slice(0, animal[1]);
       } else data = response.data.results;
       if (data.length > 0) {
         setQuestions(data);
@@ -106,7 +111,7 @@ const AppProvider = ({ children }) => {
     let url = `${API_ENDPOINT}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`;
     if (category === 'entertainment')
       url = `${MANGA_API_ENDPOINT}${table[category]}&${amount}&${difficulty}`;
-    else if (category === 'animal') url = `${table[category]}`;
+    else if (category === 'animal') url = `${table[category]}&${amount}`;
     fetchQuestions(url);
   };
 
